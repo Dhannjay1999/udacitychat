@@ -151,7 +151,7 @@ firebaseStorage=FirebaseStorage.getInstance();
                                             AuthUI.GOOGLE_PROVIDER
 
                                     )
-                                    .build()RC_SIGN_IN);
+                                    .build(),RC_SIGN_IN);
                 }
             }
         };
@@ -227,6 +227,7 @@ Uri downloadurl= taskSnapshot.getDownloadUrl();
             public void onDataChange(DataSnapshot dataSnapshot) {
                 artistList.clear();
                 for (DataSnapshot mysnapshot : dataSnapshot.getChildren()) {
+
                     Artist artist = mysnapshot.getValue(Artist.class);
                     artistList.add(artist);
                 }
